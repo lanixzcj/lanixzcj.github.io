@@ -463,4 +463,16 @@ header .entry-meta {
 	@extend .btn;
 }
 
+ul#markdown-toc {
+	border: solid 1px #ccc;
+	background: #eee;
+	float: left;
+	min-width: 250px;
+	padding: 4px 10px;
+}
+
+#markdown-toc ul li{
+    padding: 0px;
+}
+
 

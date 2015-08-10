@@ -12,12 +12,12 @@ image:
 
 * list
 {:toc}
-
+<div style="clear:both"></div>
 Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.[^1]
 
 [^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
-## Pygments Code Blocks
+# Pygments Code Blocks
 
 To modify styling and highlight colors edit `/_sass/_pygments.scss`.
 
@@ -63,7 +63,7 @@ end
 {% endhighlight %}
 
 
-### Standard Code Block
+## Standard Code Block
 
     {% raw %}
     <nav class="pagination" role="navigation">
