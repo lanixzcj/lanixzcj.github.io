@@ -9,21 +9,21 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Chengjian Zhou
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          494651913@qq.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         
+  github:        /lanixzcj
   stackexchange:  
   linkedin:       
   instagram:      
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+  google_plus:    
 
 # Background image to be tiled on all pages
 background: 
@@ -35,9 +35,9 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    China/Beijing
 future:      true
-highlighter: pygments
+highlighter: rouge/pygments
 markdown:    kramdown
 gems:
   - jekyll-sitemap

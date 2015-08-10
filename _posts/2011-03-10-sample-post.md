@@ -80,7 +80,7 @@ Syntax highlighting via Pygments
 }
 {% endhighlight %}
 
-Non Pygments code example
+    Non Pygments code example
 
     <div id="awesome">
         <p>This is great isn't it?</p>
