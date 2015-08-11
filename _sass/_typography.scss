@@ -22,6 +22,7 @@ h1 {
 a { 
 	text-decoration: none;
 	color: $link-color; 
+	word-break:break-all;
 	&:visited { 
 		color: lighten($link-color, 20); 
 	}
@@ -109,10 +110,11 @@ li {
 		@include rounded(3px);
 	}
 }
-pre {
+.entry-content pre {
 	@include font-rem(12);
 	line-height: 1.5;
 	overflow-x: auto;
+	
 	&::-webkit-scrollbar {
 		height: 12px;
 		background-color: #34362e;
