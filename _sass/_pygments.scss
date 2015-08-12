@@ -5,11 +5,20 @@
 	border: 1px solid darken($body-color, 5);
 	background-color: #272822;
 	@include rounded(3px);
-	pre {
+	pre {	
+		background-color: transparent;
 		position: relative;
 		margin: 0;
 		padding: 1em;
+		
+		code {
+		margin: 0px;
+		padding: 0px;
+		background-color: #272822;
+		border: none;
 	}
+	}
+	
 	.lineno { padding-right: 24px; color: #8f908a;}
 	.hll { background-color: #49483e }
 	.c { color: #75715e } /* Comment */
