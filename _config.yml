@@ -39,7 +39,7 @@ bing_verify:
 timezone:    Asia/Beijing
 future:      true
 highlighter: pygments
-markdown:    kramdown
+markdown:    redcarpet
 safe: true
 gems:
   - jekyll-sitemap
