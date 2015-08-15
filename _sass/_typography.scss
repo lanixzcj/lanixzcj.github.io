@@ -145,7 +145,7 @@ li {
 	
 }
 
-
+// kramdown toc
 ul#markdown-toc {
 	border: solid 1px #ccc;
 	background: #eee;
@@ -167,5 +167,28 @@ ul#markdown-toc {
 	
 	a:hover{
 		color: lighten(#057FDD, 20);
+	}
+}
+
+// table
+.entry-content table {
+
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: grey;
+	
+	td,th {
+		padding: 6px 13px;
+		border: 1px solid #ddd;
+	}
+	tr {
+		background-color: #fff;
+		border-top: 1px solid #ccc;
+	}	
+	tr:nth-child(2n) {
+		background-color: #f8f8f8;
 	}
 }
