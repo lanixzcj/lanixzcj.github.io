@@ -1,9 +1,10 @@
 ---
 layout: post-index
-title: 潜力成长中
+title: 成长的足迹
 description: "Describe this nonsense."
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
+mathjax: false
 image:
   feature: abstract-6.jpg
 
@@ -29,7 +30,14 @@ image:
   </header>
 	<div class="entry-content">
     {% if post.content contains '<!--more-->' %}
-      {{ post.content | split:'<!--more-->' | first %}}
+	  {% assign contentArray = {{post.content | split:'<!--more-->'}}%}
+	  {% if contentArray.size < 3 %}
+		{{contentArray | first}}
+	  {% else %}
+		{% for content in contentArray limit:1 offset:1 %}
+		{{content}}
+		{% endfor %}
+	  {% endif %}
     {% else if post.description%}
 	 {{ post.description }}
 	{% else %}
