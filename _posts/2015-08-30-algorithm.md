@@ -53,7 +53,7 @@ void InsertSort(int a[], int n) {
     for(int i = 1;i < n;i++){  
         int j = i - 1;   
         int x = a[i];        //复制为哨兵，即存储待排序元素  
-        while(j > 0 && x < a[j]){  //查找在有序表的插入位置  
+        while(j >= 0 && x < a[j]){  //查找在有序表的插入位置  
             a[j + 1] = a[j];  
             j--;         //元素后移  
         }  
