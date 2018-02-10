@@ -5,7 +5,7 @@ reading_time:     true
 words_per_minute: 100
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url: http://lanixzcj.github.io
+url: //lanixzcj.github.io
 
 # Owner/author information
 owner:
@@ -36,13 +36,13 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Beijing
+# timezone:    Asia/Beijing
 future:      true
 highlighter: pygments
 markdown:    redcarpet
-safe: true
-gems:
+plugins:
   - jekyll-sitemap
+  - jekyll-paginate
 sass:
   sass_dir: _sass
   style: compressed
@@ -60,7 +60,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   syntax_highlighter: rouge
-  use_coderay: use
+  enable_coderay: true
 
 redcarpet:
     extensions: [ "fenced_code_blocks", "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
