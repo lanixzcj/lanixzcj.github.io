@@ -6,7 +6,6 @@ tags: [math]
 modified:   2017-11-19 14:37:14 +0800
 share: false
 comments: false
-mathjax: false
 image:
   
 ---
