@@ -38,8 +38,8 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # timezone:    Asia/Beijing
 future:      true
-highlighter: pygments
-markdown:    redcarpet
+highlighter: rouge
+markdown:    kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
@@ -54,16 +54,12 @@ permalink:   /:categories/:title/
 paginate: 5
 
 kramdown:
-  input:  GFM
+  input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  syntax_highlighter: rouge
-  enable_coderay: true
-
-redcarpet:
-    extensions: [ "fenced_code_blocks", "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+  enable_coderay: false
 
 
 include: [".htaccess"]
