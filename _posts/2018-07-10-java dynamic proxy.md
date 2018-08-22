@@ -83,45 +83,45 @@ Java反射框架主要提供以下功能：
     * getDeclaredMethods()返回类或接口声明的所有方法，包括public，protected，private，默认（包）访问的方法，但是不包括继承的方法
     * getMethods()返回所有的public方法，包括继承的public方法
     * getMethod(String name, Class<?>... parameterTypes)返回一个特定的方法
-    ``` java
-    import java.lang.reflect.Method;
+        ``` java
+        import java.lang.reflect.Method;
 
-    class methodClass {
-        public final int c = 3;
-        public int add(int a,int b) {
-            return a + b;
+        class methodClass {
+            public final int c = 3;
+            public int add(int a,int b) {
+                return a + b;
+            }
+            public int sub(int a,int b) {
+                return a - b;
+            }
         }
-        public int sub(int a,int b) {
-            return a - b;
+        public class Main {
+            public static void main(String[] args) throws NoSuchMethodException {
+                Class<?> clazz = methodClass.class;
+                Method[] methods = clazz.getMethods();
+                Method[] declaredMethods = clazz.getDeclaredMethods();
+                Method method = clazz.getMethod("sub", int.class, int.class);
+
+                System.out.println(method);
+                for(Method m:methods)
+                    System.out.println(m);
+
+                for(Method m:declaredMethods)
+                    System.out.println(m);
+            }
         }
-    }
-    public class Main {
-        public static void main(String[] args) throws NoSuchMethodException {
-            Class<?> clazz = methodClass.class;
-            Method[] methods = clazz.getMethods();
-            Method[] declaredMethods = clazz.getDeclaredMethods();
-            Method method = clazz.getMethod("sub", int.class, int.class);
 
-            System.out.println(method);
-            for(Method m:methods)
-                System.out.println(m);
+        /*log:
+        public int methodClass.sub(int,int)
 
-            for(Method m:declaredMethods)
-                System.out.println(m);
-        }
-    }
+        public int methodClass.add(int,int)
+        public int methodClass.sub(int,int)
+        public final void java.lang.Object.wait() throws java.lang.InterruptedException
+        ...
 
-    /*log:
-    public int methodClass.sub(int,int)
-
-    public int methodClass.add(int,int)
-    public int methodClass.sub(int,int)
-    public final void java.lang.Object.wait() throws java.lang.InterruptedException
-    ...
-
-    public int methodClass.add(int,int)
-    public int methodClass.sub(int,int)*/
-    ```
+        public int methodClass.add(int,int)
+        public int methodClass.sub(int,int)*/
+        ```
 4. 获取构造器信息
     * 通过Class类的getConstructors()方法获取所有构造器
     * 通过Class类的getMethod(Class<?>... parameterTypes)获取特定构造器
@@ -492,21 +492,3 @@ public class MyMethodVisitor extends MethodVisitor {
     }
 }
 ```
-
-### BCEL
-
-### CGLIB
-
-#### 什么是CGLIB
-
-CGLIB是一个强大的、高性能的代码生成库。其被广泛应用于AOP框架（Spring、dynaop）中，用以提供方法拦截操作。
-
-#### 为什么使用CGLIB
-
-CGLIB代理主要通过对字节码的操作，为对象引入间接级别，以控制对象的访问。我们知道Java中有一个动态代理也是做这个事情的，那我们为什么不直接使用Java动态代理，而要使用CGLIB呢？答案是CGLIB相比于JDK动态代理更加强大，JDK动态代理虽然简单易用，但是其有一个致命缺陷是，只能对接口进行代理。如果要代理的类为一个普通类、没有接口，那么Java动态代理就没法使用了。
-
-CGLIB底层使用了ASM来操作字节码生成新的类。
-
-### JAVASSIST
-
-javassist是jboss的一个子项目，其主要的优点，在于简单，而且快速。直接使用java编码的形式，而不需要了解虚拟机指令，就能动态改变类的结构，或者动态生成类。
