@@ -77,7 +77,7 @@ $$
 
 这是我们所熟悉的理解方式：每个方程表示为一个图像
 
-![行图像](http://7xl20x.com1.z0.glb.clouddn.com/2.1%E8%A1%8C%E5%9B%BE%E5%83%8F.png)
+![行图像](https://lanixzcj.gitee.io/image-bed/images/2.1%E8%A1%8C%E5%9B%BE%E5%83%8F.png)
 
 交点$(3,1)$是方程的解
 
@@ -101,7 +101,7 @@ $$
 
 找到正确的列向量线性组合（x,y的值），结果为右侧向量，就可以得到解了
 
-![列图像](http://7xl20x.com1.z0.glb.clouddn.com/2.2%E5%88%97%E5%9B%BE%E5%83%8F.png)
+![列图像](https://lanixzcj.gitee.io/image-bed/images/2.2%E5%88%97%E5%9B%BE%E5%83%8F.png)
 
 通过右侧向量，可以分别获得列向量的倍数，得到方程的解$(3,1)$
 
@@ -340,7 +340,7 @@ $$C=\sum_{k=1}^{n}A_{column_k}B_{row_k}$$
 
 可以通过分块简化计算,因为KaTex还没有支持`\hline`，这里通过图片举例
 
-![](http://7xl20x.com1.z0.glb.clouddn.com/2.3block-multiplication.png)
+![](https://lanixzcj.gitee.io/image-bed/images/2.3block-multiplication.png)
 
 ### （二）逆矩阵
 

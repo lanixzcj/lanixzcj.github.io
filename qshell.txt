@@ -1,0 +1,15 @@
+﻿1. qshell account ak sk name
+2. qshell listbucket bucket -o list
+3. cat list.txt | awk '{print $1}' >list_final.txt // 取第一列
+4. qshell batchcopy 原bucket名 新bucket名 -i list_final.txt
+5. qshell qdownload -c 10 qshell.conf
+
+{
+    "dest_dir" : "X:\\Downloads\\utf-8qshell-v2.3.6\\backup",
+    "bucket" : "lanix",
+    "cdn_domain" : "plscq5ab0.bkt.clouddn.com",
+    "prefix" : "",
+    "suffixes" : ""
+}
+
+6.  python脚本替换图床url
